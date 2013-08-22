@@ -1,16 +1,9 @@
 /**
  * Given two strings, the class determine whether the concatenation of those strings will form a palindrome word or not.
-<<<<<<< HEAD
  * @author : Yeap Hooi Tong
  * @matric : A0111736M
  * @date : 8/22/13
  * @version : 1.0
-=======
- * @author Yeap Hooi Tong
- * @matric A0111736M
- * @date 21/8/13
- * @version 1.0
->>>>>>> db46b22907c23197793d01561e96b81fdc5c1fde
  */
 
 import java.util.Scanner;
