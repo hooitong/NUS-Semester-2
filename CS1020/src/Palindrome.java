@@ -1,6 +1,6 @@
 /**
  * Given two strings, the class determine whether the concatenation of those strings will form a palindrome word or not.
- * @author : Hooi Tong
+ * @author : Yeap Hooi Tong
  * @matric : A0111736M
  * @date : 8/22/13
  * @version : 1.0
