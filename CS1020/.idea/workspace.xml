@@ -7,7 +7,7 @@
     <ignored path="CS1020.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Palindrome.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377169036111" ignored="false" />
-    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377170834390" ignored="false" />
+    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377170849724" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <file leaf-file-name="HelloWorld.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="1" selection-start="3842" selection-end="3842" vertical-scroll-proportion="0.9186992">
+            <state line="103" column="1" selection-start="3842" selection-end="3842" vertical-scroll-proportion="4.1869917">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -352,7 +352,11 @@
       <created>1377170840020</created>
       <updated>1377170840020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second upload with HelloWorld">
+      <created>1377170853439</created>
+      <updated>1377170853439</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -473,7 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="1" selection-start="3842" selection-end="3842" vertical-scroll-proportion="0.9186992">
+        <state line="103" column="1" selection-start="3842" selection-end="3842" vertical-scroll-proportion="4.1869917">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
