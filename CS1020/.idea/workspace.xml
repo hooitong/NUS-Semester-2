@@ -7,7 +7,7 @@
     <ignored path="CS1020.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Palindrome.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377169036111" ignored="false" />
-    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377170790449" ignored="false" />
+    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377170834390" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +348,11 @@
       <created>1377170802874</created>
       <updated>1377170802874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second upload with HelloWorld">
+      <created>1377170840020</created>
+      <updated>1377170840020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
