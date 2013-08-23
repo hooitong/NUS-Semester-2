@@ -82,7 +82,8 @@ public class Transformation {
         // read matrix given by user and print it out in table form
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix[row].length; column++) {
-                System.out.print(matrix[row][column] + " ");
+                System.out.print(matrix[row][column]);
+                if (column != matrix[row].length - 1) System.out.print(" ");
             }
             System.out.print("\n");
         }
@@ -97,7 +98,7 @@ public class Transformation {
         // declare and initialise return matrix
         int[][] processedMatrix = new int[matrix.length][matrix[0].length];
 
-        if(degree / 90 != 1) matrix = rotate(degree-90, matrix); // if method does not hit base case, call itself
+        if (degree / 90 != 1) matrix = rotate(degree - 90, matrix); // if method does not hit base case, call itself
 
         // based on the user's degree, determine the number of operation
         for (int row = 0; row < matrix.length; row++) {
@@ -147,5 +148,4 @@ public class Transformation {
         // return new matrix
         return processedMatrix;
     }
-
 }
