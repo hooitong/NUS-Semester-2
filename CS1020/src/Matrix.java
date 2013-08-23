@@ -15,9 +15,14 @@ public class Matrix {
     static int index;
 
     public static void main(String[] args) {
+        // declare and create scanner object
         Scanner sc = new Scanner(System.in);
+
+        // read the user's input and create the 2d array
         readInput(sc);
 
+        // based on user's given operation and input, calculate the sum
+        evaluateOperation();
     }
 
     /**
@@ -49,11 +54,12 @@ public class Matrix {
     private static void evaluateOperation() {
         int sum = 0;
 
+        // if the operation is a "ROW"
         if (operation.equals("ROW")) {
             for (int column = 0; column < grid[index - 1].length; column++) {
                 sum += grid[index - 1][column];
             }
-        } else if (operation.equals("COLUMN")) {
+        } else if (operation.equals("COLUMN")) {  // if the operation is a "COLUMN'
             for (int row = 0; row < grid.length; row++) {
                 sum += grid[row][index - 1];
             }
