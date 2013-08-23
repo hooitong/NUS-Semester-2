@@ -49,13 +49,12 @@ public class Matrix {
     }
 
     /**
-     * This method reads the input and creates the 2D array
+     * This method evaluates the operation provided by the user
      */
     private static void evaluateOperation() {
         int sum = 0;
 
-        // if the operation is a "ROW"
-        if (operation.equals("ROW")) {
+        if (operation.equals("ROW")) { // if the operation is a "ROW"
             for (int column = 0; column < grid[index - 1].length; column++) {
                 sum += grid[index - 1][column];
             }
@@ -65,6 +64,7 @@ public class Matrix {
             }
         }
 
+        // print out the total sum as output
         System.out.println(sum);
     }
 }
