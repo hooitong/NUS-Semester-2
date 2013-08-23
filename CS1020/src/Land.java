@@ -22,6 +22,7 @@ class Grid {
      */
     public boolean checkNoTree(int x, int y, int size) {
         // implementation
+        return false;
     }
 
     /**
@@ -31,6 +32,7 @@ class Grid {
      * Post-condition:
      */
     public boolean checkValidSize(int size) {
+        return false;
     }
 
 
@@ -41,6 +43,7 @@ class Grid {
      */
     public int solve() {
         // implementation
+        return 1;
     }
 
 }
