@@ -97,12 +97,12 @@ public class Transformation {
         // declare and initialise return matrix
         int[][] processedMatrix = new int[matrix.length][matrix[0].length];
 
+        if(degree / 90 != 1) matrix = rotate(degree-90, matrix); // if method does not hit base case, call itself
+
         // based on the user's degree, determine the number of operation
-        for (int iteration = (degree / 90); iteration > 0; iteration--) {
-            for (int row = 0; row < matrix.length; row++) {
-                for (int column = 0; column < matrix[row].length; column++) {
-                    processedMatrix[row][column] = matrix[matrix.length - 1 - column][row];
-                }
+        for (int row = 0; row < matrix.length; row++) {
+            for (int column = 0; column < matrix[row].length; column++) {
+                processedMatrix[row][column] = matrix[matrix.length - 1 - column][row];
             }
         }
 
