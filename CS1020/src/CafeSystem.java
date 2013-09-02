@@ -1,3 +1,11 @@
+/**
+ * This class simulates a cafe, letting users order as well as allowing barista to see orders.
+ * @author Yeap Hooi Tong
+ * @matric A0111736M
+ * @date 02/09/13
+ * @version 1.0
+ */
+
 import java.util.*;
 
 class Espresso {
@@ -32,7 +40,7 @@ class Latte {
     private int orderID;
     private static int nextOrderID = 200;
 
-    // declare getter for latte class
+    // declare getter for Latte class
     public int getEspresso() {
         return espresso;
     }
@@ -60,7 +68,7 @@ class Latte {
     }
 }
 
-class Cuppuccino {
+class Cappuccino {
     // declare constant variables
     private static final int espresso = 1;
     private static final int milk = 1;
@@ -68,7 +76,7 @@ class Cuppuccino {
     private int orderID;
     private static int nextOrderID = 200;
 
-    // declare getter for latte class
+    // declare getter for Cappuccino class
     public int getEspresso() {
         return espresso;
     }
@@ -82,9 +90,9 @@ class Cuppuccino {
     }
 
     // declare default constructor
-    public Cuppuccino() {
-        this.orderID = Cuppuccino.nextOrderID;
-        Cuppuccino.nextOrderID += 10; // increament next id by 10;
+    public Cappuccino() {
+        this.orderID = Cappuccino.nextOrderID;
+        Cappuccino.nextOrderID += 10; // increament next id by 10;
     }
 
     // method to print ingredients
@@ -151,16 +159,17 @@ class Cafe {
     // declare objects array to store orders
     private Espresso espressoOrders[];
     private Latte latteOrders[];
-    private Cuppuccino cuppuccinoOrders[];
+    private Cappuccino cappuccinoOrders[];
     protected Custom customOrders[];
 
     // declare variables to store initial material
     private int espresso, milk, foam;
     // declare variables to store the numbers of drinks ordered
     private int numDrinksOrdered = 0, numEspressoOrdered = 0;
-    private int numLatteOrdered = 0, numCuppuccinoOrdered = 0;
+    private int numLatteOrdered = 0, numCappuccinoOrdered = 0;
     private int numCustomOrdered = 0, maxDrinks = 0;
 
+    // declare constructor
     public Cafe(int espresso, int milk, int foam, int amt) {
         this.espresso = espresso;
         this.milk = milk;
@@ -170,7 +179,7 @@ class Cafe {
         // create and initialise the order arrays
         espressoOrders = new Espresso[amt];
         latteOrders = new Latte[amt];
-        cuppuccinoOrders = new Cuppuccino[amt];
+        cappuccinoOrders = new Cappuccino[amt];
         customOrders = new Custom[amt];
     }
 
@@ -185,6 +194,15 @@ class Cafe {
 
     public int getFoam() {
         return foam;
+    }
+
+    // declare setter for Custom class
+    public void setMilk(int milk) {
+        this.milk = milk;
+    }
+
+    public void setFoam(int foam) {
+        this.foam = foam;
     }
 
     public boolean order(Espresso e) {
@@ -230,7 +248,7 @@ class Cafe {
         return true;
     }
 
-    public boolean order(Cuppuccino c) {
+    public boolean order(Cappuccino c) {
         // check whether the cafe is full already
         if (numDrinksOrdered >= maxDrinks) return false;
 
@@ -239,7 +257,7 @@ class Cafe {
                 this.foam < c.getFoam()) return false;
 
         // when the line is reached, order can be placed.
-        cuppuccinoOrders[numCuppuccinoOrdered] = c;
+        cappuccinoOrders[numCappuccinoOrdered] = c;
 
         // remove ingredients from the cafe
         this.espresso -= c.getEspresso();
@@ -247,7 +265,7 @@ class Cafe {
         this.foam -= c.getFoam();
 
         // update all the counters
-        numCuppuccinoOrdered++;
+        numCappuccinoOrdered++;
         numDrinksOrdered++;
 
         return true;
@@ -287,9 +305,9 @@ class Cafe {
             latteOrders[i].showIngredients();
         }
 
-        // print out every order available for cuppuccino
-        for (int i = 0; i < numCuppuccinoOrdered; i++) {
-            cuppuccinoOrders[i].showIngredients();
+        // print out every order available for cappuccino
+        for (int i = 0; i < numCappuccinoOrdered; i++) {
+            cappuccinoOrders[i].showIngredients();
         }
 
         // print out every order available for custom orders
@@ -315,12 +333,12 @@ class CafeSystem {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int userChoice;
-        Cafe myCafe = new Cafe(10, 10, 10, 10);        //10 is just an example
+        Cafe myCafe = new Cafe(10, 10, 10, 10);
 
         do {
-            System.out.print("Choose 1. Order Espresso, 2. Order Latte" +
-                    "3. Order Cuppuccino, 4. Show Ingredients, 5. Exit ->," +
-                    " 6. Custom Drink, 7. Change Custom");
+            System.out.print("Cafe Crayon\n1. Order Espresso\n2. Order Latte" +
+                    "\n3. Order Cappuccino\n4. Show Ingredients\n" +
+                    "5. Order Custom Drink\n6. Change Custom Drink\n7. Exit\nOption: ");
             userChoice = sc.nextInt();
 
             switch (userChoice) {
@@ -339,8 +357,8 @@ class CafeSystem {
                     }
                     break;
                 case 3:
-                    if (myCafe.order(new Cuppuccino())) {
-                        System.out.println("Cuppuccino ordered!");
+                    if (myCafe.order(new Cappuccino())) {
+                        System.out.println("Cappuccino ordered!");
                     } else {
                         System.out.println("Either cafe is full or not enough ingredients to make order!");
                     }
@@ -350,9 +368,6 @@ class CafeSystem {
                     myCafe.showOrders();
                     break;
                 case 5:
-                    System.out.println("Bye bye!");
-                    break;
-                case 6:
                     System.out.println("Please enter the amount of " +
                             " milk and foam seperated by a space. ");
                     int milk = sc.nextInt();
@@ -364,17 +379,35 @@ class CafeSystem {
                                 " enough ingredients to make order!");
                     }
                     break;
-                case 7:
+                case 6:
+                    // accept custom order ID from user
                     System.out.println("Please enter your order ID: ");
                     int orderID = sc.nextInt();
-                    int customIndex = findOrderID(myCafe.customOrders, +
-                            orderID);
+
+                    // find the index of the order in the array
+                    int customIndex = findOrderID(myCafe.customOrders, orderID);
+
+                    // accept new milk and foam quantity from user
                     System.out.println("Enter the new quantity for " +
                             "milk and foam seperated by a space. ");
-                    myCafe.customOrders[customIndex].setMilk(sc.nextInt());
-                    myCafe.customOrders[customIndex].setFoam(sc.nextInt());
-                    System.out.println("Drink changed.");
+
+                    // check whether there's enough ingredients
+                    int newMilk = sc.nextInt();
+                    int newFoam = sc.nextInt();
+                    if (myCafe.getMilk() < newMilk - myCafe.customOrders[customIndex].getMilk() || myCafe.getFoam() < newFoam - myCafe.customOrders[customIndex].getFoam()) {
+                        System.out.println("Not enough milk / foam, order not changed");
+                    } else { // pass thru requirements, make changes and update ingredients
+                        myCafe.setMilk(myCafe.getMilk() - (newMilk - myCafe.customOrders[customIndex].getMilk()));
+                        myCafe.setFoam(myCafe.getFoam() - (newFoam - myCafe.customOrders[customIndex].getFoam()));
+                        myCafe.customOrders[customIndex].setMilk(newMilk);
+                        myCafe.customOrders[customIndex].setFoam(newFoam);
+
+                        System.out.println("Drink changed.");
+                    }
+                case 7: // user exits application
+                    System.out.println("Bye bye!");
+                    break;
             }
-        } while (userChoice != 5);
+        } while (userChoice != 7);
     }
 }
