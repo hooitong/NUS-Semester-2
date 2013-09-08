@@ -105,15 +105,23 @@ public class QuerySystem {
     public Airline checkDeparture(SGTime currentTime, String origin, String destination) {
         // create references to keep track on the lowest
         Airline refToLowest = null;
+        int departureDay = 0; // determine which day person is able to fly
 
         // match the origin and destination cities for each airline
         for (Airline a : airlines) {
             if (a.getFromCity().equals(origin) && a.getToCity().equals(destination)) {
-                if (refToLowest == null) refToLowest = a; // if its the first airline
-                // if the time is earlier then lowest and is more than currentTime
-                if (a.getDepartureTime().isEarlier(refToLowest.getDepartureTime())
-                        && (!a.getDepartureTime().isEarlier(currentTime))) {
+                if (refToLowest == null) {
                     refToLowest = a;
+                    departureDay = currentTime.isEligible(a.getDepartureTime());
+
+                } // if its the first airline
+                // if the time is earlier then lowest and is more than currentTime
+                else {
+                    if ((a.getDepartureTime().isEarlier(refToLowest.getDepartureTime())
+                            && (departureDay == currentTime.isEligible(a.getDepartureTime()))) || (departureDay > currentTime.isEligible(a.getDepartureTime()))) {
+                        refToLowest = a;
+                        departureDay = currentTime.isEligible(a.getDepartureTime());
+                    }
                 }
             }
         }
@@ -134,15 +142,29 @@ public class QuerySystem {
     public Airline checkArrival(SGTime currentTime, String origin, String destination) {
         // create references to keep track on the lowest
         Airline refToLowest = null;
+        int arrivalDayRef = 0; // as there is a possibility that the user takes the next flight
+        // the day he arrives will be modified accordingly as well
 
         // match the origin and destination cities for each airline
         for (Airline a : airlines) {
             if (a.getFromCity().equals(origin) && a.getToCity().equals(destination)) {
-                if (refToLowest == null) refToLowest = a; // if its the first airline
-                // if time earlier then previous arrival time and departure time must be after current time
-                if ((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() <= refToLowest.getArrivalDay())
-                        && (!a.getDepartureTime().isEarlier(currentTime))) {
+                if (refToLowest == null) {
                     refToLowest = a;
+                    arrivalDayRef = refToLowest.getArrivalDay() + currentTime.isEligible(refToLowest.getDepartureTime());
+                } // if its the first airline
+                // if time earlier then previous arrival time and departure time must be after current time
+                else {
+                    // have to take flight on the next day
+                    if (currentTime.isEligible(a.getDepartureTime()) == 0) {
+                        if (((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() == arrivalDayRef)) || a.getArrivalDay() < arrivalDayRef) {
+                            refToLowest = a;
+                            arrivalDayRef = a.getArrivalDay();
+                        }
+
+                    } else if (((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) == arrivalDayRef)) || a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) < arrivalDayRef) {
+                        refToLowest = a;
+                        arrivalDayRef = a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime());
+                    }
                 }
             }
         }
@@ -167,13 +189,13 @@ public class QuerySystem {
         // match the origin and destination cities for each airline
         for (Airline a : airlines) {
             if (a.getFromCity().equals(origin) && a.getToCity().equals(destination)) {
-                if (refToLowest == null) refToLowest = a; // if its the first airline
-                // check whether departure time is valid
-                if (!a.getDepartureTime().isEarlier(currentTime)) {
-                    // if flight time (arrival time - destination time) is less than refToLowest and departure time must be after current time
-                    if (a.getDepartureTime().getDuration(a.getArrivalTime(), a.getArrivalDay()) < refToLowest.getDepartureTime().getDuration(refToLowest.getArrivalTime(), refToLowest.getArrivalDay())) {
-                        refToLowest = a;
-                    }
+                if (refToLowest == null) {
+                    refToLowest = a;
+                    continue;
+                } // if its the first airline
+                // if flight time (arrival time - destination time) is less than refToLowest and departure time must be after current time
+                if (a.getDepartureTime().getDuration(a.getArrivalTime(), a.getArrivalDay()) < refToLowest.getDepartureTime().getDuration(refToLowest.getArrivalTime(), refToLowest.getArrivalDay())) {
+                    refToLowest = a;
                 }
             }
         }
@@ -305,7 +327,21 @@ class SGTime {
      * @return if true, the current object time is earlier than the argument
      */
     public boolean isEarlier(SGTime time) {
-        return this.minutes < time.minutes;
+        return this.minutes < time.getRawMinutes();
+    }
+
+    /**
+     * Allow user to check whether which day will he be able to catch that flight
+     *
+     * @param time the airline's departure time
+     * @return the day that he is able to take the next flight
+     */
+    public int isEligible(SGTime time) {
+        if (this.minutes + 60 <= time.getRawMinutes()) return 0; // if time is 1 hour earlier than departure
+        else if (this.minutes + 60 >= 1440) { // if the possible departure time is extended to the next day
+            if ((this.minutes + 60) % 1440 > time.getRawMinutes()) return 2; // if he misses due to the 1hr problem
+            else return 1; // he is able to take the next day's flight
+        } else return 1; // if time does not pass over 24 hours
     }
 
     /**
