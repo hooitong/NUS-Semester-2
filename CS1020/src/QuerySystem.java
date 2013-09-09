@@ -14,12 +14,14 @@ import java.util.Scanner;
  * program as well as processing queries from Acer
  */
 public class QuerySystem {
+    // stores all the airlines in the system
     private ArrayList<Airline> airlines = new ArrayList<Airline>();
 
     /**
      * This method will be used to handle all the querying and input from the user
      */
     public static void main(String[] args) {
+        // create Scanner object
         Scanner sc = new Scanner(System.in);
 
         // create new QuerySystem object and initialise it from the user's input
@@ -62,11 +64,12 @@ public class QuerySystem {
         int iteration = sc.nextInt();
         while (iteration != 0) {
 
-            // based on user's query type
+            // get user's query information
             int query = sc.nextInt();
             String origin = sc.next();
             String destination = sc.next();
             SGTime time = new SGTime(sc.next()); // the current time
+
             Airline result = null;
             // based on query type
             switch (query) {
@@ -77,10 +80,10 @@ public class QuerySystem {
                     result = checkArrival(time, origin, destination);
                     break;
                 case 3: // shortest flight time
-                    result = checkShortest(time, origin, destination);
+                    result = checkShortest(origin, destination);
                     break;
                 case 4: // lowest cost
-                    result = checkLowest(time, origin, destination);
+                    result = checkLowest(origin, destination);
                     break;
             }
 
@@ -99,7 +102,7 @@ public class QuerySystem {
      * @param origin      the origin city of the airline
      * @param destination the destination city of the airline
      * @return Airline the airline with the earliest departure time
-     * @pre: currentTime must be a valid time
+     * @pre: currentTime must be a valid time, there must be 1 result for each query
      */
 
     public Airline checkDeparture(SGTime currentTime, String origin, String destination) {
@@ -125,7 +128,7 @@ public class QuerySystem {
                 }
             }
         }
-
+        // return the airline with the earliest departure time
         return refToLowest;
     }
 
@@ -137,7 +140,7 @@ public class QuerySystem {
      * @param origin      the origin city of the airline
      * @param destination the destination city of the airline
      * @return Airline the airline with the earliest arrival time
-     * @pre: currentTime must be a valid time
+     * @pre: currentTime must be a valid time, there must be 1 result for each query
      */
     public Airline checkArrival(SGTime currentTime, String origin, String destination) {
         // create references to keep track on the lowest
@@ -149,26 +152,19 @@ public class QuerySystem {
         for (Airline a : airlines) {
             if (a.getFromCity().equals(origin) && a.getToCity().equals(destination)) {
                 if (refToLowest == null) {
+                    // assign it as the lowest and record the arrival day
                     refToLowest = a;
                     arrivalDayRef = refToLowest.getArrivalDay() + currentTime.isEligible(refToLowest.getDepartureTime());
                 } // if its the first airline
                 // if time earlier then previous arrival time and departure time must be after current time
-                else {
-                    // have to take flight on the next day
-                    if (currentTime.isEligible(a.getDepartureTime()) == 0) {
-                        if (((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() == arrivalDayRef)) || a.getArrivalDay() < arrivalDayRef) {
-                            refToLowest = a;
-                            arrivalDayRef = a.getArrivalDay();
-                        }
-
-                    } else if (((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) == arrivalDayRef)) || a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) < arrivalDayRef) {
-                        refToLowest = a;
-                        arrivalDayRef = a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime());
-                    }
+                else if (((a.getArrivalTime().isEarlier(refToLowest.getArrivalTime()) && a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) == arrivalDayRef)) || a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime()) < arrivalDayRef) {
+                    refToLowest = a;
+                    arrivalDayRef = a.getArrivalDay() + currentTime.isEligible(a.getDepartureTime());
                 }
             }
         }
 
+        // return the airline with the earliest arrival time
         return refToLowest;
     }
 
@@ -176,44 +172,41 @@ public class QuerySystem {
      * Check the shortest flight time given the origin
      * destination and given time
      *
-     * @param currentTime the earliest time given by the user
      * @param origin      the origin city of the airline
      * @param destination the destination city of the airline
-     * @return Airline the airline with the earliest arrival time
-     * @pre: currentTime must be a valid time
+     * @return Airline the airline with the shortest flight time
+     * @pre: currentTime must be a valid time, there must be 1 result for each query
      */
-    public Airline checkShortest(SGTime currentTime, String origin, String destination) {
+    public Airline checkShortest(String origin, String destination) {
         // create references to keep track on the lowest
         Airline refToLowest = null;
 
         // match the origin and destination cities for each airline
         for (Airline a : airlines) {
             if (a.getFromCity().equals(origin) && a.getToCity().equals(destination)) {
-                if (refToLowest == null) {
+                if (refToLowest == null) {   // if its the first airline
                     refToLowest = a;
-                    continue;
-                } // if its the first airline
+                }
                 // if flight time (arrival time - destination time) is less than refToLowest and departure time must be after current time
-                if (a.getDepartureTime().getDuration(a.getArrivalTime(), a.getArrivalDay()) < refToLowest.getDepartureTime().getDuration(refToLowest.getArrivalTime(), refToLowest.getArrivalDay())) {
+                else if (a.getDepartureTime().getDuration(a.getArrivalTime(), a.getArrivalDay()) < refToLowest.getDepartureTime().getDuration(refToLowest.getArrivalTime(), refToLowest.getArrivalDay())) {
                     refToLowest = a;
                 }
             }
         }
 
+        // return the shortest duration airline
         return refToLowest;
     }
 
     /**
-     * Check the lowest cost given the origin
-     * destination and given time
+     * Check the lowest cost given the origin destination and given time
      *
-     * @param currentTime the earliest time given by the user
      * @param origin      the origin city of the airline
      * @param destination the destination city of the airline
-     * @return Airline the airline with the earliest arrival time
-     * @pre: currentTime must be a valid time
+     * @return Airline the airline with the lowest cost
+     * @pre: currentTime must be a valid time, there must be 1 result for each query
      */
-    public Airline checkLowest(SGTime currentTime, String origin, String destination) {
+    public Airline checkLowest(String origin, String destination) {
         // create references to keep track on the lowest
         int lowestCost = -1;
         Airline refToLowest = null;
@@ -240,6 +233,7 @@ public class QuerySystem {
  * like storing origin, destination, departure, cost, etc
  */
 class Airline {
+    // declare the necessary variables of the class
     private String fromCity;
     private String toCity;
     private SGTime departureTime;
@@ -301,7 +295,7 @@ class SGTime {
         minutes = (Integer.parseInt(timeArray[0]) * 60) + Integer.parseInt(timeArray[1]);
     }
 
-    // declare getters
+    // declare getters for the class
     public int getHour() {
         return minutes / 60;
     }
@@ -322,6 +316,7 @@ class SGTime {
 
     /**
      * This method is used to check whether the time is earlier than the given object's time
+     * only applies if its on the same day.
      *
      * @param time the comparison time object
      * @return if true, the current object time is earlier than the argument
