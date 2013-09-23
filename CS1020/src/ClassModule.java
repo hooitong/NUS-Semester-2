@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Module {
+class ClassModule {
     private String name; // module name
     private String code; // module code
     private int credit; // credit given
@@ -14,7 +14,7 @@ class Module {
      * @pre Arguments passed in must be valid
      * @post The object is successfully created and instantiated properly
      */
-    public Module(String _name, String _code, int _credit, int _time) {
+    public ClassModule(String _name, String _code, int _credit, int _time) {
         name = _name;
         code = _code;
         credit = _credit;
