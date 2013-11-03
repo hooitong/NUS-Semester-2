@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad19381-4364-4329-82e0-6074e1b44c6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Alternate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Balls.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Hooi_Tong.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Josephine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Guess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NChooseK.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PsuedoRMQ.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SwingMonkey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Github\NUS\CS1020\src\Module.java" afterPath="$PROJECT_DIR$/src/ClassModule.java" />
     </list>
     <ignored path="CS1020.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Palindrome.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377169036111" ignored="false" />
-    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1379893604500" ignored="false" />
+    <file path="/Dummy.txt" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1383447897487" ignored="false" />
     <file path="/Transformation.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377263025247" ignored="false" />
     <file path="/Land.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377669729455" ignored="false" />
     <file path="/Triangle.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377403697180" ignored="false" />
     <file path="/Conway.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1377406036309" ignored="false" />
-    <file path="/fragment.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1378641709880" ignored="false" />
+    <file path="/fragment.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1382011074500" ignored="false" />
     <file path="/CafeSystem.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1378109553894" ignored="false" />
     <file path="/a.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1378609724915" ignored="false" />
     <file path="/a.xml" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1378609760810" ignored="false" />
@@ -30,6 +30,12 @@
     <file path="/Balls.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1379829155117" ignored="false" />
     <file path="/Josephine.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1379859763140" ignored="false" />
     <file path="/Alternate.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1379903860774" ignored="false" />
+    <file path="/File Header.txt.ft" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1381982052691" ignored="false" />
+    <file path="/PsuedoRMQ.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1381993764547" ignored="false" />
+    <file path="/Guess.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1381998001068" ignored="false" />
+    <file path="/SwingMonkey.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1382022652857" ignored="false" />
+    <file path="/Monotone.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1382057124148" ignored="false" />
+    <file path="/NChooseK.java" changelist="7ad19381-4364-4329-82e0-6074e1b44c6c" time="1383317850566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,24 +96,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Alternate.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Alternate.java">
+      <file leaf-file-name="PsuedoRMQ.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PsuedoRMQ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="107" selection-start="2372" selection-end="2372" vertical-scroll-proportion="1.3325301">
+            <state line="61" column="263" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NChooseK.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NChooseK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="58" selection-start="503" selection-end="503" vertical-scroll-proportion="0.23958333">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#304#312#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Balls.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Balls.java">
+      <file leaf-file-name="Monotone.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Monotone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="238" column="0" selection-start="6861" selection-end="7011" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="46" column="66" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Palindrome.java" />
-        <option value="$PROJECT_DIR$/src/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/Transformation.java" />
         <option value="$PROJECT_DIR$/src/Triangle.java" />
         <option value="$PROJECT_DIR$/src/Conway.java" />
@@ -143,6 +155,11 @@
         <option value="$PROJECT_DIR$/src/Balls.java" />
         <option value="$PROJECT_DIR$/src/Josephine.java" />
         <option value="$PROJECT_DIR$/src/Alternate.java" />
+        <option value="$PROJECT_DIR$/src/PsuedoRMQ.java" />
+        <option value="$PROJECT_DIR$/src/Guess.java" />
+        <option value="$PROJECT_DIR$/src/SwingMonkey.java" />
+        <option value="$PROJECT_DIR$/src/Monotone.java" />
+        <option value="$PROJECT_DIR$/src/NChooseK.java" />
       </list>
     </option>
   </component>
@@ -151,6 +168,28 @@
     <option name="y" value="-4" />
     <option name="width" value="2568" />
     <option name="height" value="1418" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -180,8 +219,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,34 +265,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Josephine.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS1020" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS1020" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Balls.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS1020" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS1020" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alternate.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Alternate">
-    <configuration default="false" name="Transformation" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.NChooseK">
+    <configuration default="false" name="PsuedoRMQ" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Transformation" />
+      <option name="MAIN_CLASS_NAME" value="PsuedoRMQ" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -270,9 +348,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Land" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="Guess" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Land" />
+      <option name="MAIN_CLASS_NAME" value="Guess" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -287,9 +365,32 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Balls" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="SwingMonkey" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Balls" />
+      <option name="MAIN_CLASS_NAME" value="SwingMonkey" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CS1020" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Monotone" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Monotone" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -304,26 +405,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Josephine" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="NChooseK" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Josephine" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS1020" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Alternate" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Alternate" />
+      <option name="MAIN_CLASS_NAME" value="NChooseK" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -430,19 +514,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Transformation" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Land" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Balls" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Josephine" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Alternate" />
+      <item index="0" class="java.lang.String" itemvalue="Application.PsuedoRMQ" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Guess" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SwingMonkey" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Monotone" />
+      <item index="4" class="java.lang.String" itemvalue="Application.NChooseK" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Alternate" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Josephine" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Balls" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Land" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Transformation" />
+        <item index="0" class="java.lang.String" itemvalue="Application.NChooseK" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Monotone" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SwingMonkey" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Guess" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PsuedoRMQ" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -498,36 +582,60 @@
       <created>1378643955198</created>
       <updated>1378643955198</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="completed take home lab 4">
+      <created>1382057425349</created>
+      <updated>1382057425349</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="2568" height="1418" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298722" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294025" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16308671" sideWeight="0.672956" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32704404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16308671" sideWeight="0.6713836" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39864865" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -574,7 +682,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented airlines but not cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed take home lab 4" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -593,6 +701,7 @@
     <MESSAGE value="final update for palindrome and helloworld (lab 0)" />
     <MESSAGE value="initial implementation of transformation" />
     <MESSAGE value="implemented airlines but not cleaned" />
+    <MESSAGE value="completed take home lab 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,124 +711,103 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Transformation.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Tutorial/Module.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="80" selection-start="384" selection-end="384" vertical-scroll-proportion="0.011217949" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Palindrome.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Tutorial/Tut 4/Tut04ex1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="89" selection-start="678" selection-end="1109" vertical-scroll-proportion="0.22435898" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Lab Practice/Lab 2 Ex 1/MarkRuler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="1" selection-start="3842" selection-end="3842" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="31" column="93" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.2804487" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Palindrome.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Lab Practice/Lab 3 Ex 2/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="109" selection-start="0" selection-end="2053" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="38" column="113" selection-start="995" selection-end="995" vertical-scroll-proportion="0.33653846" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Lab Practice/Lab 3 Ex 1/WebBrowser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="188" selection-end="188" vertical-scroll-proportion="0.09690554">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="36" column="136" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.3253205" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Palindrome.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Tutorial/ContactList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="68" selection-start="434" selection-end="434" vertical-scroll-proportion="0.011217949" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Conway.java">
+    <entry file="file://G:/Dropbox/NUS Module Theorycraft/CS1020/Lab Practice/Sample Linked List/TailedLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="49" selection-start="2037" selection-end="2071" vertical-scroll-proportion="0.20866774">
-          <folding />
-        </state>
+        <state line="9" column="78" selection-start="178" selection-end="205" vertical-scroll-proportion="0.100961536" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Triangle.java">
+    <entry file="file://$PROJECT_DIR$/src/Balls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="40" selection-start="960" selection-end="1355" vertical-scroll-proportion="-0.29858658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuerySystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="58" selection-start="5158" selection-end="5165" vertical-scroll-proportion="0.08173077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="28" selection-start="4569" selection-end="4569" vertical-scroll-proportion="0.61858976">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Land.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="2" selection-start="149" selection-end="406" vertical-scroll-proportion="0.013621795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CafeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClassModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="54" selection-start="807" selection-end="835" vertical-scroll-proportion="0.26966292">
+        <state line="50" column="159" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.47115386">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Josephine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="59" selection-start="3838" selection-end="3838" vertical-scroll-proportion="2.040964">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="87" column="58" selection-start="2581" selection-end="2581" vertical-scroll-proportion="0.33814102">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Balls.java">
+    <entry file="file://$PROJECT_DIR$/src/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="0" selection-start="6861" selection-end="7011" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="10" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.044871796">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Alternate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="107" selection-start="2372" selection-end="2372" vertical-scroll-proportion="1.3325301">
+        <state line="168" column="13" selection-start="5280" selection-end="5280" vertical-scroll-proportion="0.5849359">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monotone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="66" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PsuedoRMQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="263" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SwingMonkey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="98" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.26041666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Guess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="43" selection-start="233" selection-end="3484" vertical-scroll-proportion="0.020833334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NChooseK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="58" selection-start="503" selection-end="503" vertical-scroll-proportion="0.23958333">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#304#312#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -787,9 +875,8 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ProjectJDKs.UI">
+      <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -799,7 +886,7 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ProjectLibrariesConfigurable.UI">
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">
