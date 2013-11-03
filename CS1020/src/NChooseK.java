@@ -12,7 +12,7 @@ class NChooseK {
         Scanner sc = new Scanner(System.in);
         // declare a Scanner object to read input
         ArrayList<String> test = new ArrayList<String>();
-        test = solve(sc.nextInt(), sc.next(), "");
+        //test = solve(sc.nextInt(), sc.next(), "");
 
         // read input and process them accordingly
         for(String s : test){
