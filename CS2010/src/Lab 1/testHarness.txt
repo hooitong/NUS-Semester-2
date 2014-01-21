@@ -1,0 +1,25 @@
+// Yeap Hooi Tong A0111736M
+// The aim of this test harness is used to check whether the program
+// is able to identify all the inputs from the user correctly based
+// on the given requirement of the program.
+
+in1: 
+// a invalid identifier despite containing all accepted characters, it cannot start with a digit
+3foo_
+
+in2:
+// a valid identifier where it contains all accepted types and starts with the accepted underscore
+_foo3
+
+in3:
+// an invalid identifier as based on the requirement, it can only consist of digits, letters and 
+// the underscore character
+$Foo5
+
+in4:
+// an invalid identifier as it consist of a invalid character '%'
+foO3_%
+
+in5:
+// a valid identifier as uppercase and lowercase are accepted and the identifier contains all valid characters
+FOo_35
