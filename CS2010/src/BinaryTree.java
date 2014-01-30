@@ -5,22 +5,23 @@
  * Time: 12:44 PM
  */
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Serializable;
-
 /**
  * Class for a binary tree that stores type E objects.
  *
  * @author Koffman and Wolfgang
  */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Serializable;
+
 public class BinaryTree<E> implements Serializable {
 
     // Data Field
     /**
      * The root of the binary tree
      */
-    protected Node<E> root;
+    private Node<E> root;
 
     /**
      * Construct an empty BinaryTree
@@ -161,4 +162,3 @@ public class BinaryTree<E> implements Serializable {
         }
     }
 }
-
