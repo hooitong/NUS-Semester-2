@@ -1,10 +1,10 @@
 // Double space files specified on command line.
 
 import java.io.FileReader;
-import java.util.Scanner;
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class DoubleSpace {
     public static void main(String[] args) {
@@ -24,8 +24,8 @@ public class DoubleSpace {
             // Double space the lines
             f = new PrintWriter(new FileWriter(fileName + ".ds"));
 
-            while(sc.hasNextLine()){
-                f.println(sc.nextLine()+"\n");
+            while (sc.hasNextLine()) {
+                f.println(sc.nextLine() + "\n");
             }
 
         } catch (IOException e) {
