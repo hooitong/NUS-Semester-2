@@ -1,4 +1,4 @@
-// Double space files specified on command line.
+package week_1;// Double space files specified on command line.
 
 import java.io.FileReader;
 import java.io.FileWriter;

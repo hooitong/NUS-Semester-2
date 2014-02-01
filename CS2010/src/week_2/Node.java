@@ -1,4 +1,4 @@
-/**
+package week_2; /**
  * User: Yeap Hooi Tong
  * Matric: A0111736M
  * Date: 28/1/14
