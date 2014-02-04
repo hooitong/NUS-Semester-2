@@ -1,65 +1,18 @@
 /**
  * @author Yeap Hooi Tong
- * @matric A0111736M
- * @desc Binary Tree for Tutorial 2
+ * @matric A0111736
+ * @date 03/02/14
+ * @desc Class for a binary tree that stores type E objects.
  */
-
-/**
- * Credits:
- * Class for a binary tree that stores type E objects.
- * @author Koffman and Wolfgang
- **/
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class BinaryTree<E> implements Serializable {
-
-    /**
-     * Class to encapsulate a tree node.
-     */
-    protected static class Node<E> implements Serializable {
-        // Data Fields
-
-        /**
-         * The information stored in this node.
-         */
-        public E data;
-        /**
-         * Reference to the left child.
-         */
-        public Node<E> left;
-        /**
-         * Reference to the right child.
-         */
-        public Node<E> right;
-
-        // Constructors
-
-        /**
-         * Construct a node with given data and no children.
-         *
-         * @param data The data to store in this node
-         */
-        public Node(E data) {
-            this.data = data;
-            left = null;
-            right = null;
-        }
-
-        // Methods
-
-        /**
-         * Returns a string representation of the node.
-         *
-         * @return A string representation of the data fields
-         */
-        @Override
-        public String toString() {
-            return data.toString();
-        }
-    }
 
     // Data Field
     /**
@@ -155,58 +108,99 @@ public class BinaryTree<E> implements Serializable {
         return (root == null || (root.left == null && root.right == null));
     }
 
-    /**
-     * Method to read a binary tree.
-     *
-     * @param bR The input file
-     * @return The binary tree
-     * @throws IOException If there is an input error
-     * @pre The input consists of a preorder traversal
-     * of the binary tree. The line "null" indicates a null tree.
-     */
-    public static BinaryTree<String> readBinaryTree(BufferedReader bR)
-            throws IOException {
-        // Read a line and trim leading and trailing spaces.
-        String data = bR.readLine().trim();
-        if (data.equals("null")) {
-            return null;
-        } else {
-            BinaryTree<String> leftTree = readBinaryTree(bR);
-            BinaryTree<String> rightTree = readBinaryTree(bR);
-            return new BinaryTree<String>(data, leftTree, rightTree);
-        }
+    public int height() {
+        return height(root);
+    }
+
+    public int height(Node<E> r) {
+        if (r == null) return 0;
+        return 1 + Math.max(height(r.left), height(r.right));
+    }
+
+    public int size() {
+        return size(root);
+    }
+
+    public int size(Node<E> r) {
+        if (r == null) return 0;
+        return 1 + size(r.left) + size(r.right);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        preOrderTraverse(root, 1, sb);
+        return sb.toString();
     }
 
     /**
-     * Method to return the inorder traversal of the binary tree
-     * as a sequence of tokens that are separated by a space.
+     * Perform a preorder traversal.
      *
-     * @return An inorder traversal as a string
+     * @param node  The local root
+     * @param depth The depth
+     * @param sb    The string buffer to save the output
      */
-    public String inorderToString() {
+    private void preOrderTraverse(Node<E> node, int depth,
+                                  StringBuilder sb) {
+        for (int i = 1; i < depth; i++) {
+            sb.append("  ");
+        }
+        if (node == null) {
+            sb.append("null\n");
+        } else {
+            sb.append(node.toString());
+            sb.append("\n");
+            preOrderTraverse(node.left, depth + 1, sb);
+            preOrderTraverse(node.right, depth + 1, sb);
+        }
+    }
+
+    /* Implement the following method to read the path encodings and create the nodes.
+     * 
+     * Sample Input
+
+	(11,LL) (7,LLL) (8,R)
+	(5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
+	*/
+    public static BinaryTree<String> readBinaryTree1(BufferedReader bR)
+            throws IOException {
+        Scanner scan = new Scanner(bR);
+        while(scan.hasNext()){
+            String token = scan.next();
+            token.substring(1,)
+        }
+
+    }
+
+    /**
+     * Method to return the preorder traversal of the binary tree
+     * as a sequence of strings each separated by a space.
+     *
+     * @return A preorder traversal as a string
+     */
+    public String preorderToString() {
         StringBuilder stb = new StringBuilder();
-        inorderToString(stb, root);
+        preorderToString(stb, root);
         return stb.toString();
     }
 
-    private void inorderToString(StringBuilder stb, Node<E> root) {
-        if (root == null) return;
-        if (root.left != null) {
-            inorderToString(stb, root.left);
-            stb.append(" ");
-        }
+    private void preorderToString(StringBuilder stb, Node<E> root) {
         stb.append(root);
+        if (root.left != null) {
+            stb.append(" ");
+            preorderToString(stb, root.left);
+        }
         if (root.right != null) {
             stb.append(" ");
-            inorderToString(stb, root.right);
+            preorderToString(stb, root.right);
         }
     }
 
     /**
      * Method to return the postorder traversal of the binary tree
-     * as a sequence of tokens that are separated by a space.
+     * as a sequence of strings each separated by a space.
      *
-     * @return An postorder traversal as a string
+     * @return A postorder traversal as a string
      */
     public String postorderToString() {
         StringBuilder stb = new StringBuilder();
@@ -215,7 +209,6 @@ public class BinaryTree<E> implements Serializable {
     }
 
     private void postorderToString(StringBuilder stb, Node<E> root) {
-        if (root == null) return;
         if (root.left != null) {
             postorderToString(stb, root.left);
             stb.append(" ");
@@ -225,5 +218,60 @@ public class BinaryTree<E> implements Serializable {
             stb.append(" ");
         }
         stb.append(root);
+    }
+
+    /**
+     * A method to display the inorder traversal of a binary tree
+     * placeing a left parenthesis before each subtree and a right
+     * parenthesis after each subtree. For example the expression
+     * tree shown in Figure 6.12 would be represented as
+     * (((x) + (y)) * ((a) / (b))).
+     *
+     * @return An inorder string representation of the tree
+     */
+    public String inorderToString() {
+        StringBuilder stb = new StringBuilder();
+        inorderToString(stb, root);
+        return stb.toString();
+    }
+
+    private void inorderToString(StringBuilder stb, Node<E> root) {
+        if (root.left != null) {
+            stb.append("(");
+            inorderToString(stb, root.left);
+            stb.append(") ");
+        }
+        stb.append(root);
+        if (root.right != null) {
+            stb.append(" (");
+            inorderToString(stb, root.right);
+            stb.append(")");
+        }
+    }
+
+    public String levelorderToString() {
+        StringBuilder stb = new StringBuilder();
+        levelorderToString(stb, root);
+        return stb.toString();
+    }
+
+    private void levelorderToString(StringBuilder stb, Node<E> root) {
+        if (root == null) {
+            stb.append("An empty tree");
+            return;
+        }
+        Queue<Node<E>> q = new LinkedList<Node<E>>();
+        q.offer(root);
+        while (!q.isEmpty()) {
+            Node<E> curr = q.poll();
+            stb.append(curr);
+            stb.append(" ");
+            if (curr.left != null) {
+                q.offer(curr.left);
+            }
+            if (curr.right != null) {
+                q.offer(curr.right);
+            }
+        }
     }
 }
