@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -55,6 +56,50 @@ public class BinaryTree<E> implements Serializable {
             root.right = null;
         }
     }
+
+    /* Implement the following method to read the path encodings and create the nodes.
+     *
+     * Sample Input
+
+	(11,LL) (7,LLL) (8,R)
+	(5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
+	*/
+    public static BinaryTree<String> readBinaryTree1(BufferedReader bR)
+            throws IOException {
+        Scanner scan = new Scanner(bR);
+        PriorityQueue<NP> pq = new PriorityQueue<NP>();
+
+        /* take in all of user's input and read accordingly */
+        while (scan.hasNext()) {
+            String token = scan.next();
+            if (token.equals("()")) break; /* end of node input indicated */
+
+            /* get the information from the bracket into the NP object */
+            NP n = new NP(token.substring(token.indexOf('(') + 1, token.indexOf(',')), token.substring(token.indexOf(',') + 1, token.indexOf(')')));
+
+            /* add the object to the priority queue */
+            pq.add(n);
+        }
+
+        /* once all the object is added into the priority queue, create a empty binary tree  */
+        BinaryTree<Integer> bTree = new BinaryTree<Integer>(null);
+
+        /* pop each NP object out and add into the tree */
+        while(!pq.isEmpty()){
+            NP n = pq.poll();
+            Node<Integer> pointer = bTree.root;
+            for(char dir : n.path.toCharArray()){
+                if(pointer == null){
+                    pointer = new Node<Integer>()
+                }
+            }
+        }
+
+
+        return null;
+    }
+
+    public void addNode()
 
     /**
      * Return the left subtree.
@@ -153,23 +198,6 @@ public class BinaryTree<E> implements Serializable {
             preOrderTraverse(node.left, depth + 1, sb);
             preOrderTraverse(node.right, depth + 1, sb);
         }
-    }
-
-    /* Implement the following method to read the path encodings and create the nodes.
-     * 
-     * Sample Input
-
-	(11,LL) (7,LLL) (8,R)
-	(5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
-	*/
-    public static BinaryTree<String> readBinaryTree1(BufferedReader bR)
-            throws IOException {
-        Scanner scan = new Scanner(bR);
-        while(scan.hasNext()){
-            String token = scan.next();
-            token.substring(1,)
-        }
-
     }
 
     /**
