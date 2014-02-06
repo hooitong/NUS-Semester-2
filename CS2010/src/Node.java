@@ -15,15 +15,15 @@ public class Node<E> implements Serializable {
     /**
      * The information stored in this node.
      */
-    public E data;
+    private E data;
     /**
      * Reference to the left child.
      */
-    public Node<E> left;
+    private Node<E> left;
     /**
      * Reference to the right child.
      */
-    public Node<E> right;
+    private Node<E> right;
 
     // Constructors
 
@@ -38,6 +38,13 @@ public class Node<E> implements Serializable {
         right = null;
     }
 
+    /**
+     * Construct a node with given data and two child nodes
+     *
+     * @param data  The data to store in this node
+     * @param left  Left child node
+     * @param right Right child node
+     */
     public Node(E data, Node<E> left, Node<E> right) {
         this.data = data;
         this.left = left;
@@ -57,6 +64,8 @@ public class Node<E> implements Serializable {
         return s;
     }
 
+    /* getter and setter methods */
+
     public E getData() {
         return data;
     }
@@ -69,12 +78,12 @@ public class Node<E> implements Serializable {
         return left;
     }
 
-    public Node<E> getRight() {
-        return right;
-    }
-
     public void setLeft(Node<E> left) {
         this.left = left;
+    }
+
+    public Node<E> getRight() {
+        return right;
     }
 
     public void setRight(Node<E> right) {
