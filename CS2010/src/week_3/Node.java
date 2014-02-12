@@ -1,9 +1,9 @@
-package lab_2; /**
- * User: Yeap Hooi Tong
- * Matric: A0111736M
- * Date: 28/1/14
- * Time: 12:44 PM
- * Desc: Class to encapsulate a tree node.
+package week_3; /**
+ * @author Yeap Hooi Tong
+ * @matric A0111736
+ * @date 03/02/14
+ * @desc Class for a week_3.Node<E>  that stores type E objects.
+ * Easier to use as compare to when week_3.Node is an inner class of week_3.BinaryTree
  */
 
 import java.io.Serializable;
@@ -39,11 +39,11 @@ public class Node<E> implements Serializable {
     }
 
     /**
-     * Construct a node with given data and 2 given children.
+     * Construct a node with given data and two child nodes
      *
      * @param data  The data to store in this node
-     * @param left  Reference to the left child
-     * @param right Reference to the right child
+     * @param left  Left child node
+     * @param right Right child node
      */
     public Node(E data, Node<E> left, Node<E> right) {
         this.data = data;
@@ -54,66 +54,41 @@ public class Node<E> implements Serializable {
     // Methods
 
     /**
-     * Returns the information stored in the node
-     *
-     * @return info stored in node
-     */
-    public E getData() {
-        return data;
-    }
-
-    /**
-     * Replace the node's data with the given data
-     *
-     * @param newData the new data given
-     */
-    public void setData(E newData) {
-        data = newData;
-    }
-
-    /**
-     * Returns the left child node reference
-     *
-     * @return reference to the left child
-     */
-    public Node<E> getLeft() {
-        return left;
-    }
-
-    /**
-     * Replace the left child node reference with the given one
-     *
-     * @param left new reference for the left child
-     */
-    public void setLeft(Node<E> left) {
-        this.left = left;
-    }
-
-    /**
-     * Returns the right child node reference
-     *
-     * @return reference to the right child
-     */
-    public Node<E> getRight() {
-        return right;
-    }
-
-    /**
-     * Replace the right child node reference with the given one
-     *
-     * @param right new reference for the right child
-     */
-    public void setRight(Node<E> right) {
-        this.right = right;
-    }
-
-    /**
      * Returns a string representation of the node.
      *
      * @return A string representation of the data fields
      */
     @Override
     public String toString() {
-        return data.toString();
+        String s = data.toString();
+        return s;
     }
+
+    /* getter and setter methods */
+
+    public E getData() {
+        return data;
+    }
+
+    public void setData(E newData) {
+        data = newData;
+    }
+
+    public Node<E> getLeft() {
+        return left;
+    }
+
+    public void setLeft(Node<E> left) {
+        this.left = left;
+    }
+
+    public Node<E> getRight() {
+        return right;
+    }
+
+    public void setRight(Node<E> right) {
+        this.right = right;
+    }
+
 }
+

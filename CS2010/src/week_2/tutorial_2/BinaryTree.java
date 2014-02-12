@@ -1,4 +1,4 @@
-package tutorial_2; /**
+package week_2.tutorial_2; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @desc Binary Tree for Tutorial 2
@@ -68,14 +68,14 @@ public class BinaryTree<E> implements Serializable {
     protected Node<E> root;
 
     /**
-     * Construct an empty tutorial_2.BinaryTree
+     * Construct an empty week_2.tutorial_2.week_3.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a tutorial_2.BinaryTree with a specified root.
+     * Construct a week_2.tutorial_2.week_3.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.

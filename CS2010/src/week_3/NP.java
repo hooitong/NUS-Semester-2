@@ -1,4 +1,4 @@
-/**
+package week_3; /**
  * @author Yeap Hooi Tong
  * @matric A0111736
  * @date 03/02/14

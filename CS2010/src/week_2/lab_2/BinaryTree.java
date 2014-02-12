@@ -1,4 +1,4 @@
-package lab_2; /**
+package week_2.lab_2; /**
  * User: Yeap Hooi Tong
  * Matric: A0111736M
  * Date: 28/1/14
@@ -24,14 +24,14 @@ public class BinaryTree<E> implements Serializable {
     private Node<E> root;
 
     /**
-     * Construct an empty lab_2.tutorial_2.BinaryTree
+     * Construct an empty week_2.lab_2.week_2.tutorial_2.week_3.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a lab_2.tutorial_2.BinaryTree with a specified root.
+     * Construct a week_2.lab_2.week_2.tutorial_2.week_3.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.

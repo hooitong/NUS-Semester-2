@@ -1,19 +1,64 @@
 /**
- * @author Yeap Hooi Tong
- * @matric A0111736
- * @date 03/02/14
- * @desc Class for a binary tree that stores type E objects.
+ * User: Yeap Hooi Tong
+ * Matric: A0111736M
+ * Date: 11/2/14
  */
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
 
+/**
+ * Class for a binary tree that stores type E objects.
+ *
+ * @author Koffman and Wolfgang
+ */
 public class BinaryTree<E> implements Serializable {
 
+    /**
+     * Class to encapsulate a tree node.
+     */
+    protected static class Node<E> implements Serializable {
+        // Data Fields
+
+        /**
+         * The information stored in this node.
+         */
+        public E data;
+        /**
+         * Reference to the left child.
+         */
+        public Node<E> left;
+        /**
+         * Reference to the right child.
+         */
+        public Node<E> right;
+
+        // Constructors
+
+        /**
+         * Construct a node with given data and no children.
+         *
+         * @param data The data to store in this node
+         */
+        public Node(E data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+
+        // Methods
+
+        /**
+         * Returns a string representation of the node.
+         *
+         * @return A string representation of the data fields
+         */
+        @Override
+        public String toString() {
+            return data.toString();
+        }
+    }
     // Data Field
     /**
      * The root of the binary tree
@@ -45,75 +90,14 @@ public class BinaryTree<E> implements Serializable {
                       BinaryTree<E> rightTree) {
         root = new Node<E>(data);
         if (leftTree != null) {
-            root.setLeft(leftTree.root);
+            root.left = leftTree.root;
         } else {
-            root.setLeft(null);
+            root.left = null;
         }
         if (rightTree != null) {
-            root.setRight(rightTree.root);
+            root.right = rightTree.root;
         } else {
-            root.setRight(null);
-        }
-    }
-
-    /**
-     * Reads path encoding from the user and construct a binary tree
-     *
-     * @param bR BufferReader object
-     * @return BinaryTree object
-     * @throws java.io.IOException
-     */
-    public static BinaryTree<String> readBinaryTree1(BufferedReader bR)
-            throws IOException {
-        Scanner scan = new Scanner(bR);
-        BinaryTree<String> bTree = null;
-
-        /* take in all of user's input and read accordingly */
-        while (scan.hasNext()) {
-            String token = scan.next();
-            if (token.equals("()")) break; /* end of node input indicated */
-            if (bTree == null) { bTree = new BinaryTree<String>(new Node<String>("-1")); }
-
-            /* get the parameters from the path encoding and store into the NP object */
-            NP pathInfo = new NP(token.substring(token.indexOf('(') + 1, token.indexOf(',')), token.substring(token.indexOf(',') + 1, token.indexOf(')')));
-
-            /* call recursive method to add node to the tree according to the path encoding */
-            addNode(bTree.root, pathInfo.getLabel(), pathInfo.getPath());
-        }
-
-        /* if no new node is created, create a empty binary tree */
-        if (bTree == null) { bTree = new BinaryTree<String>(); }
-
-        /* return the created binary tree object */
-        return bTree;
-    }
-
-    /**
-     * Recursive method to add the nodes based on the given path
-     *
-     * @param root  a node object pointer
-     * @param value the value that is to be added
-     * @param path  the traversal path it needs to take
-     */
-    private static void addNode(Node<String> root, String value, String path) {
-        /* base case when the path passed in is empty */
-        /* replace the value at root */
-        if (path.equals("")) {
-            root.setData(value);
-            return;
-        }
-
-        /* perform the traversal based on the path string, starting from the left index */
-        if (path.charAt(0) == 'L') {
-            if (root.getLeft() == null) {
-                root.setLeft(new Node<String>("-1"));
-            }
-            addNode(root.getLeft(), value, path.substring(1));
-        } else if (path.charAt(0) == 'R') {
-            if (root.getRight() == null) {
-                root.setRight(new Node<String>("-1"));
-            }
-            addNode(root.getRight(), value, path.substring(1));
+            root.right = null;
         }
     }
 
@@ -124,8 +108,8 @@ public class BinaryTree<E> implements Serializable {
      * the left subtree is null
      */
     public BinaryTree<E> getLeftSubtree() {
-        if (root != null && root.getLeft() != null) {
-            return new BinaryTree<E>(root.getLeft());
+        if (root != null && root.left != null) {
+            return new BinaryTree<E>(root.left);
         } else {
             return null;
         }
@@ -139,8 +123,8 @@ public class BinaryTree<E> implements Serializable {
      * right subtree is null.
      */
     public BinaryTree<E> getRightSubtree() {
-        if (root != null && root.getRight() != null) {
-            return new BinaryTree<E>(root.getRight());
+        if (root != null && root.right != null) {
+            return new BinaryTree<E>(root.right);
         } else {
             return null;
         }
@@ -154,7 +138,7 @@ public class BinaryTree<E> implements Serializable {
      */
     public E getData() {
         if (root != null) {
-            return root.getData();
+            return root.data;
         } else {
             return null;
         }
@@ -166,25 +150,7 @@ public class BinaryTree<E> implements Serializable {
      * @return true if the root has no children
      */
     public boolean isLeaf() {
-        return (root == null || (root.getLeft() == null && root.getRight() == null));
-    }
-
-    public int height() {
-        return height(root);
-    }
-
-    public int height(Node<E> r) {
-        if (r == null) return 0;
-        return 1 + Math.max(height(r.getLeft()), height(r.getRight()));
-    }
-
-    public int size() {
-        return size(root);
-    }
-
-    public int size(Node<E> r) {
-        if (r == null) return 0;
-        return 1 + size(r.getLeft()) + size(r.getRight());
+        return (root == null || (root.left == null && root.right == null));
     }
 
     @Override
@@ -211,8 +177,30 @@ public class BinaryTree<E> implements Serializable {
         } else {
             sb.append(node.toString());
             sb.append("\n");
-            preOrderTraverse(node.getLeft(), depth + 1, sb);
-            preOrderTraverse(node.getRight(), depth + 1, sb);
+            preOrderTraverse(node.left, depth + 1, sb);
+            preOrderTraverse(node.right, depth + 1, sb);
+        }
+    }
+
+    /**
+     * Method to read a binary tree.
+     *
+     * @param bR The input file
+     * @return The binary tree
+     * @throws IOException If there is an input error
+     * @pre The input consists of a preorder traversal
+     * of the binary tree. The line "null" indicates a null tree.
+     */
+    public static BinaryTree<String> readBinaryTree(BufferedReader bR)
+            throws IOException {
+        // Read a line and trim leading and trailing spaces.
+        String data = bR.readLine().trim();
+        if (data.equals("null")) {
+            return null;
+        } else {
+            BinaryTree<String> leftTree = readBinaryTree(bR);
+            BinaryTree<String> rightTree = readBinaryTree(bR);
+            return new BinaryTree<String>(data, leftTree, rightTree);
         }
     }
 
@@ -230,99 +218,13 @@ public class BinaryTree<E> implements Serializable {
 
     private void preorderToString(StringBuilder stb, Node<E> root) {
         stb.append(root);
-        if (root.getLeft() != null) {
+        if (root.left != null) {
             stb.append(" ");
-            preorderToString(stb, root.getLeft());
+            preorderToString(stb, root.left);
         }
-        if (root.getRight() != null) {
+        if (root.right != null) {
             stb.append(" ");
-            preorderToString(stb, root.getRight());
+            preorderToString(stb, root.right);
         }
-    }
-
-    /**
-     * Method to return the postorder traversal of the binary tree
-     * as a sequence of strings each separated by a space.
-     *
-     * @return A postorder traversal as a string
-     */
-    public String postorderToString() {
-        StringBuilder stb = new StringBuilder();
-        postorderToString(stb, root);
-        return stb.toString();
-    }
-
-    private void postorderToString(StringBuilder stb, Node<E> root) {
-        if (root.getLeft() != null) {
-            postorderToString(stb, root.getLeft());
-            stb.append(" ");
-        }
-        if (root.getRight() != null) {
-            postorderToString(stb, root.getRight());
-            stb.append(" ");
-        }
-        stb.append(root);
-    }
-
-    /**
-     * A method to display the inorder traversal of a binary tree
-     * placeing a left parenthesis before each subtree and a right
-     * parenthesis after each subtree. For example the expression
-     * tree shown in Figure 6.12 would be represented as
-     * (((x) + (y)) * ((a) / (b))).
-     *
-     * @return An inorder string representation of the tree
-     */
-    public String inorderToString() {
-        StringBuilder stb = new StringBuilder();
-        inorderToString(stb, root);
-        return stb.toString();
-    }
-
-    private void inorderToString(StringBuilder stb, Node<E> root) {
-        if (root.getLeft() != null) {
-            stb.append("(");
-            inorderToString(stb, root.getLeft());
-            stb.append(") ");
-        }
-        stb.append(root);
-        if (root.getRight() != null) {
-            stb.append(" (");
-            inorderToString(stb, root.getRight());
-            stb.append(")");
-        }
-    }
-
-    public String levelorderToString() {
-        StringBuilder stb = new StringBuilder();
-        stb.append("levelorder: ");
-
-        return levelorderToString(stb, root) ? stb.toString() : "not complete\n" + stb.toString();
-    }
-
-    private boolean levelorderToString(StringBuilder stb, Node<E> root) {
-        /* boolean flag to signify whether the tree is complete */
-        boolean isComplete = true;
-        if (root == null) {
-            stb.append("An empty tree");
-            return isComplete;
-        }
-
-        Queue<Node<E>> q = new LinkedList<Node<E>>();
-        q.offer(root);
-        while (!q.isEmpty()) {
-            Node<E> curr = q.poll();
-            if (curr.toString().equals("-1")) isComplete = false;
-            stb.append(curr);
-            stb.append(" ");
-            if (curr.getLeft() != null) {
-                q.offer(curr.getLeft());
-            }
-            if (curr.getRight() != null) {
-                q.offer(curr.getRight());
-            }
-        }
-
-        return isComplete;
     }
 }

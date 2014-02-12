@@ -1,4 +1,4 @@
-package tutorial_2; /**
+package week_2.tutorial_2; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @desc Test Driver Program for Tutorial 2

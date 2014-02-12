@@ -1,8 +1,8 @@
-/**
+package week_3; /**
  * @author Yeap Hooi Tong
  * @matric A0111736
  * @date 03/02/14
- * @desc Class to test the BinaryTree class
+ * @desc Class to test the week_3.BinaryTree class
  */
 
 import java.io.BufferedReader;
