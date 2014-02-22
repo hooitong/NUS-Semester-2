@@ -1,4 +1,4 @@
-/**
+package week_4; /**
  * User: Yeap Hooi Tong
  * Matric: A0111736M
  * Date: 11/2/14
@@ -13,7 +13,7 @@ public class TestBinarySearchTree {
      * Traverses ordered list and displays each element.
      * Displays an error message if an element is out of order.
      *
-     * @param testList An ordered list of integers
+     * @param testTree An ordered list of integers
      * @author Koffman & Wolfgang
      */
     public static void traverseAndShow(BinarySearchTree<Integer> testTree) {

@@ -1,4 +1,4 @@
-/**
+package week_4; /**
  * @name: Yeap Hooi Tong
  * @matric: A0111736M
  * @date: 2/12/14
@@ -8,7 +8,7 @@
 import java.util.PriorityQueue;
 
 /**
- * Class Name: TestMaxMin
+ * Class Name: week_4.TestMaxMin
  * Description: It is used to test whether the Java PriorityQueue<E> class is a min-heap or max-heap
  */
 

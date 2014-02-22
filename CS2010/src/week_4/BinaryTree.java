@@ -1,19 +1,18 @@
-package week_2.tutorial_2; /**
- * @author Yeap Hooi Tong
- * @matric A0111736M
- * @desc Binary Tree for Tutorial 2
+package week_4; /**
+ * User: Yeap Hooi Tong
+ * Matric: A0111736M
+ * Date: 11/2/14
  */
-
-/**
- * Credits:
- * Class for a binary tree that stores type E objects.
- * @author Koffman and Wolfgang
- **/
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Serializable;
 
+/**
+ * Class for a binary tree that stores type E objects.
+ *
+ * @author Koffman and Wolfgang
+ */
 public class BinaryTree<E> implements Serializable {
 
     /**
@@ -60,7 +59,6 @@ public class BinaryTree<E> implements Serializable {
             return data.toString();
         }
     }
-
     // Data Field
     /**
      * The root of the binary tree
@@ -68,14 +66,14 @@ public class BinaryTree<E> implements Serializable {
     protected Node<E> root;
 
     /**
-     * Construct an empty week_2.tutorial_2.week_3.week_4.BinaryTree
+     * Construct an empty week_4.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a week_2.tutorial_2.week_3.week_4.BinaryTree with a specified root.
+     * Construct a week_4.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.
@@ -155,6 +153,35 @@ public class BinaryTree<E> implements Serializable {
         return (root == null || (root.left == null && root.right == null));
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        preOrderTraverse(root, 1, sb);
+        return sb.toString();
+    }
+
+    /**
+     * Perform a preorder traversal.
+     *
+     * @param node  The local root
+     * @param depth The depth
+     * @param sb    The string buffer to save the output
+     */
+    private void preOrderTraverse(Node<E> node, int depth,
+                                  StringBuilder sb) {
+        for (int i = 1; i < depth; i++) {
+            sb.append("  ");
+        }
+        if (node == null) {
+            sb.append("null\n");
+        } else {
+            sb.append(node.toString());
+            sb.append("\n");
+            preOrderTraverse(node.left, depth + 1, sb);
+            preOrderTraverse(node.right, depth + 1, sb);
+        }
+    }
+
     /**
      * Method to read a binary tree.
      *
@@ -178,52 +205,26 @@ public class BinaryTree<E> implements Serializable {
     }
 
     /**
-     * Method to return the inorder traversal of the binary tree
-     * as a sequence of tokens that are separated by a space.
+     * Method to return the preorder traversal of the binary tree
+     * as a sequence of strings each separated by a space.
      *
-     * @return An inorder traversal as a string
+     * @return A preorder traversal as a string
      */
-    public String inorderToString() {
+    public String preorderToString() {
         StringBuilder stb = new StringBuilder();
-        inorderToString(stb, root);
+        preorderToString(stb, root);
         return stb.toString();
     }
 
-    private void inorderToString(StringBuilder stb, Node<E> root) {
-        if (root == null) return;
-        if (root.left != null) {
-            inorderToString(stb, root.left);
-            stb.append(" ");
-        }
+    private void preorderToString(StringBuilder stb, Node<E> root) {
         stb.append(root);
+        if (root.left != null) {
+            stb.append(" ");
+            preorderToString(stb, root.left);
+        }
         if (root.right != null) {
             stb.append(" ");
-            inorderToString(stb, root.right);
+            preorderToString(stb, root.right);
         }
-    }
-
-    /**
-     * Method to return the postorder traversal of the binary tree
-     * as a sequence of tokens that are separated by a space.
-     *
-     * @return An postorder traversal as a string
-     */
-    public String postorderToString() {
-        StringBuilder stb = new StringBuilder();
-        postorderToString(stb, root);
-        return stb.toString();
-    }
-
-    private void postorderToString(StringBuilder stb, Node<E> root) {
-        if (root == null) return;
-        if (root.left != null) {
-            postorderToString(stb, root.left);
-            stb.append(" ");
-        }
-        if (root.right != null) {
-            postorderToString(stb, root.right);
-            stb.append(" ");
-        }
-        stb.append(root);
     }
 }

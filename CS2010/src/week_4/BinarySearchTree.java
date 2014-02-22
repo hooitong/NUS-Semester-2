@@ -1,4 +1,4 @@
-/**
+package week_4; /**
  * User: Yeap Hooi Tong
  * Matric: A0111736M
  * Date: 11/2/14
@@ -241,11 +241,11 @@ public class BinarySearchTree<E extends Comparable<E>>
      */
 
     /**
-     * Return the contents of the BinarySearchTree as a List of items
+     * Return the contents of the week_4.BinarySearchTree as a List of items
      * in ascending order. (Note the exercise suggests returning a string
      * of item separated by newline characters, but a List is more general
      * and useful for the testing performed by the exercise.  Also, the
-     * toString method of the BinaryTree class would be hidden and it is
+     * toString method of the week_4.BinaryTree class would be hidden and it is
      * useful to verify some of the tests.
      */
     public List<E> toList() {

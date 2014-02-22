@@ -1,13 +1,15 @@
-package week_3; /**
+/**
  * @author Yeap Hooi Tong
- * @matric A0111736
- * @date 03/02/14
- * @desc Class for a week_3.Node<E>  that stores type E objects.
- * Easier to use as compare to when week_3.Node is an inner class of week_3.week_4.BinaryTree
+ * @matric A0111736M
+ * @date 22/02/14
  */
 
 import java.io.Serializable;
 
+/**
+ * Class for a Node<E>  that stores type E objects.
+ * Easier to use as compare to when Node is an inner class of BinaryTree
+ */
 public class Node<E> implements Serializable {
 
     // Data Fields
@@ -15,15 +17,15 @@ public class Node<E> implements Serializable {
     /**
      * The information stored in this node.
      */
-    private E data;
+    public E data;
     /**
      * Reference to the left child.
      */
-    private Node<E> left;
+    public Node<E> left;
     /**
      * Reference to the right child.
      */
-    private Node<E> right;
+    public Node<E> right;
 
     // Constructors
 
@@ -38,13 +40,6 @@ public class Node<E> implements Serializable {
         right = null;
     }
 
-    /**
-     * Construct a node with given data and two child nodes
-     *
-     * @param data  The data to store in this node
-     * @param left  Left child node
-     * @param right Right child node
-     */
     public Node(E data, Node<E> left, Node<E> right) {
         this.data = data;
         this.left = left;
@@ -61,10 +56,10 @@ public class Node<E> implements Serializable {
     @Override
     public String toString() {
         String s = data.toString();
+//    if (left == null ) s += " left is null";
+//    if (right == null ) s += " right is null";
         return s;
     }
-
-    /* getter and setter methods */
 
     public E getData() {
         return data;
@@ -78,12 +73,12 @@ public class Node<E> implements Serializable {
         return left;
     }
 
-    public void setLeft(Node<E> left) {
-        this.left = left;
-    }
-
     public Node<E> getRight() {
         return right;
+    }
+
+    public void setLeft(Node<E> left) {
+        this.left = left;
     }
 
     public void setRight(Node<E> right) {

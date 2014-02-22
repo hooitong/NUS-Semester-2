@@ -1,4 +1,4 @@
-/**
+package week_4; /**
  * @name: Yeap Hooi Tong
  * @matric: A0111736M
  * @date: 2/12/14
@@ -8,7 +8,7 @@
 import java.util.Stack;
 
 /**
- * Class Name: TestPriorityQueue
+ * Class Name: week_4.TestPriorityQueue
  * Description: Test Driver to ensure correct implementation of the PriorityQueue
  */
 
@@ -36,7 +36,7 @@ public class TestPriorityQueue {
 
 
 /**
- * Class Name: MyPriorityQueue
+ * Class Name: week_4.MyPriorityQueue
  * Description: Stack-based implementation of the PriorityQueue
  */
 class MyPriorityQueue {
