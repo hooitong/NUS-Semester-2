@@ -1,4 +1,4 @@
-/**
+package week_5; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @date 22/02/14
@@ -50,7 +50,7 @@ public class TestExpressionTree {
     /**
      * This method is used to evaluate the expression tree recursively.
      *
-     * @param expressionTree The BinaryTree Object
+     * @param expressionTree The week_5.BinaryTree Object
      * @return int value of the expression tree
      */
     public static int evaluateExpressionTree(BinaryTree<String> expressionTree) {

@@ -8,7 +8,7 @@ package week_2.lab_2; /**
 
 import java.io.IOException;
 
-/* Create a binary tree from scratch using the methods in the week_2.lab_2.week_3.Node class
+/* Create a binary tree from scratch using the methods in the week_2.lab_2.week_3.week_5.Node class
  * */
 public class TestNodePublic {
     public static void main(String[] args) throws IOException {
@@ -31,7 +31,7 @@ public class TestNodePublic {
         /* test the preorderToString() method */
         System.out.println(bt.preorderToString() + " (pre-order traversal)");
 
-        /* change the root data for demonstration purpose as well as test getData() & set setData() of the week_2.lab_2.week_3.Node class */
+        /* change the root data for demonstration purpose as well as test getData() & set setData() of the week_2.lab_2.week_3.week_5.Node class */
         System.out.println("Current root before change: " + bt.getRoot().getData());
         bt.getRoot().setData("/");
         System.out.println("Current root after change: " + bt.getRoot().getData());

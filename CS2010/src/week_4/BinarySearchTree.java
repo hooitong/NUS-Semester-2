@@ -164,7 +164,7 @@ public class BinarySearchTree<E extends Comparable<E>>
                 // If there is no right child, return left child.
                 return localRoot.left;
             } else {
-                // Node being deleted has 2 children, replace the data
+                // week_5.Node being deleted has 2 children, replace the data
                 // with inorder predecessor.
                 if (localRoot.left.right == null) {
                     // The left child has no right child.
@@ -245,7 +245,7 @@ public class BinarySearchTree<E extends Comparable<E>>
      * in ascending order. (Note the exercise suggests returning a string
      * of item separated by newline characters, but a List is more general
      * and useful for the testing performed by the exercise.  Also, the
-     * toString method of the week_4.BinaryTree class would be hidden and it is
+     * toString method of the week_4.week_5.BinaryTree class would be hidden and it is
      * useful to verify some of the tests.
      */
     public List<E> toList() {
@@ -320,7 +320,7 @@ public class BinarySearchTree<E extends Comparable<E>>
                 /* If there is no right child, return left child. */
                 return localRoot.left;
             } else {
-                /* Node being deleted has 2 children, replace the data
+                /* week_5.Node being deleted has 2 children, replace the data
                  * with inorder successor. */
                 if (localRoot.right.left == null) {
                     /* if the right child has no left child, it is the inorder successor */

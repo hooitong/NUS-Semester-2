@@ -68,14 +68,14 @@ public class BinaryTree<E> implements Serializable {
     protected Node<E> root;
 
     /**
-     * Construct an empty week_2.tutorial_2.week_3.week_4.BinaryTree
+     * Construct an empty week_2.tutorial_2.week_3.week_4.week_5.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a week_2.tutorial_2.week_3.week_4.BinaryTree with a specified root.
+     * Construct a week_2.tutorial_2.week_3.week_4.week_5.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.

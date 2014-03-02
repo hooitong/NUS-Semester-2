@@ -1,10 +1,11 @@
 /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
- * @date 22/02/14
+ * @date 02/03/14
  */
 
 import java.io.Serializable;
+
 
 /**
  * Class for a Node<E>  that stores type E objects.
@@ -73,12 +74,12 @@ public class Node<E> implements Serializable {
         return left;
     }
 
-    public Node<E> getRight() {
-        return right;
-    }
-
     public void setLeft(Node<E> left) {
         this.left = left;
+    }
+
+    public Node<E> getRight() {
+        return right;
     }
 
     public void setRight(Node<E> right) {

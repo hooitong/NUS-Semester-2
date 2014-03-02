@@ -1,7 +1,7 @@
 /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
- * @date 22/02/14
+ * @date 02/03/14
  */
 
 import java.io.Serializable;
@@ -82,6 +82,10 @@ public class BinaryTree<E> implements Serializable {
         } else {
             return null;
         }
+    }
+
+    public Node<E> getRoot() {
+        return root;
     }
 
     /**
