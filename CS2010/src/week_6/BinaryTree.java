@@ -1,4 +1,4 @@
-/**
+package week_6; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @date 02/03/14
@@ -20,14 +20,14 @@ public class BinaryTree<E> implements Serializable {
     protected Node<E> root;
 
     /**
-     * Construct an empty BinaryTree
+     * Construct an empty week_6.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a BinaryTree with a specified root.
+     * Construct a week_6.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.

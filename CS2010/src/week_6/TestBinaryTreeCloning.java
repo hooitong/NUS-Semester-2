@@ -1,4 +1,4 @@
-/**
+package week_6; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @date 02/03/14
@@ -37,10 +37,10 @@ public class TestBinaryTreeCloning {
     }
 
     /**
-     * This method is used to deep clone an given BinaryTree
+     * This method is used to deep clone an given week_6.BinaryTree
      *
-     * @param expressionTree the BinaryTree object to be cloned
-     * @return Reference to the cloned BinaryTree object
+     * @param expressionTree the week_6.BinaryTree object to be cloned
+     * @return Reference to the cloned week_6.BinaryTree object
      */
     public static BinaryTree<String> cloneBinaryTree(BinaryTree<String> expressionTree) {
         /* base case when the tree is empty */

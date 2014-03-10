@@ -7,8 +7,8 @@ package week_5; /**
 import java.io.Serializable;
 
 /**
- * Class for a week_5.Node<E>  that stores type E objects.
- * Easier to use as compare to when week_5.Node is an inner class of week_5.BinaryTree
+ * Class for a week_5.week_6.Node<E>  that stores type E objects.
+ * Easier to use as compare to when week_5.week_6.Node is an inner class of week_5.week_6.BinaryTree
  */
 public class Node<E> implements Serializable {
 

@@ -1,4 +1,4 @@
-/**
+package week_6; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @date 02/03/14
@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 
 /**
- * Class for a Node<E>  that stores type E objects.
- * Easier to use as compare to when Node is an inner class of BinaryTree
+ * Class for a week_6.Node<E>  that stores type E objects.
+ * Easier to use as compare to when week_6.Node is an inner class of week_6.BinaryTree
  */
 public class Node<E> implements Serializable {
 

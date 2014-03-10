@@ -50,7 +50,7 @@ public class TestExpressionTree {
     /**
      * This method is used to evaluate the expression tree recursively.
      *
-     * @param expressionTree The week_5.BinaryTree Object
+     * @param expressionTree The week_5.week_6.BinaryTree Object
      * @return int value of the expression tree
      */
     public static int evaluateExpressionTree(BinaryTree<String> expressionTree) {

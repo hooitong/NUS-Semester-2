@@ -21,14 +21,14 @@ public class BinaryTree<E> implements Serializable {
     protected Node<E> root;
 
     /**
-     * Construct an empty week_3.week_4.week_5.BinaryTree
+     * Construct an empty week_3.week_4.week_5.week_6.BinaryTree
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Construct a week_3.week_4.week_5.BinaryTree with a specified root.
+     * Construct a week_3.week_4.week_5.week_6.BinaryTree with a specified root.
      * Should only be used by subclasses.
      *
      * @param root The node that is the root of the tree.
@@ -60,7 +60,7 @@ public class BinaryTree<E> implements Serializable {
      * Reads path encoding from the user and construct a binary tree
      *
      * @param bR BufferReader object
-     * @return week_3.week_4.week_5.BinaryTree object
+     * @return week_3.week_4.week_5.week_6.BinaryTree object
      * @throws java.io.IOException
      */
     public static BinaryTree<String> readBinaryTree1(BufferedReader bR)

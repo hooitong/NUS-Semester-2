@@ -2,8 +2,8 @@ package week_3; /**
  * @author Yeap Hooi Tong
  * @matric A0111736
  * @date 03/02/14
- * @desc Class for a week_3.week_5.Node<E>  that stores type E objects.
- * Easier to use as compare to when week_3.week_5.Node is an inner class of week_3.week_4.week_5.BinaryTree
+ * @desc Class for a week_3.week_5.week_6.Node<E>  that stores type E objects.
+ * Easier to use as compare to when week_3.week_5.week_6.Node is an inner class of week_3.week_4.week_5.week_6.BinaryTree
  */
 
 import java.io.Serializable;
