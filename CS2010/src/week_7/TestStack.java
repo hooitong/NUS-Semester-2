@@ -1,4 +1,4 @@
-/**
+package week_7; /**
  * @author Yeap Hooi Tong
  * @matric A0111736M
  * @date 10/03/14
@@ -16,7 +16,7 @@ public class TestStack {
     public static void main(String[] args) {
         MyStack<Integer> st = new MyStack<Integer>();
         Stack<Integer> st1 = new Stack<Integer>();
-        System.out.println("Fill a Java stack and MyStack with some random numbers ");
+        System.out.println("Fill a Java stack and week_7.MyStack with some random numbers ");
         System.out.println("------------------------------------------------------");
         for (int i = 0; i < 50; ++i) { /* Sample size of 50 Items */
             int j = (int) (Math.random() * 1000);
@@ -37,7 +37,7 @@ public class TestStack {
         }
 
         System.out.println("------------------------------------------------------");
-        System.out.println("Fill a Java stack and MyStack with 10 random numbers ");
+        System.out.println("Fill a Java stack and week_7.MyStack with 10 random numbers ");
         System.out.println("------------------------------------------------------");
         for (int i = 0; i < 10; ++i) { /* Sample size of 10 Items */
             int j = (int) (Math.random() * 1000);
