@@ -73,12 +73,12 @@ public class Node<E> implements Serializable {
         return left;
     }
 
-    public Node<E> getRight() {
-        return right;
-    }
-
     public void setLeft(Node<E> left) {
         this.left = left;
+    }
+
+    public Node<E> getRight() {
+        return right;
     }
 
     public void setRight(Node<E> right) {

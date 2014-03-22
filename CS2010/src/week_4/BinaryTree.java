@@ -16,54 +16,10 @@ import java.io.Serializable;
 public class BinaryTree<E> implements Serializable {
 
     /**
-     * Class to encapsulate a tree node.
-     */
-    protected static class Node<E> implements Serializable {
-        // Data Fields
-
-        /**
-         * The information stored in this node.
-         */
-        public E data;
-        /**
-         * Reference to the left child.
-         */
-        public Node<E> left;
-        /**
-         * Reference to the right child.
-         */
-        public Node<E> right;
-
-        // Constructors
-
-        /**
-         * Construct a node with given data and no children.
-         *
-         * @param data The data to store in this node
-         */
-        public Node(E data) {
-            this.data = data;
-            left = null;
-            right = null;
-        }
-
-        // Methods
-
-        /**
-         * Returns a string representation of the node.
-         *
-         * @return A string representation of the data fields
-         */
-        @Override
-        public String toString() {
-            return data.toString();
-        }
-    }
-    // Data Field
-    /**
      * The root of the binary tree
      */
     protected Node<E> root;
+    // Data Field
 
     /**
      * Construct an empty week_4.week_5.week_6.BinaryTree
@@ -98,6 +54,28 @@ public class BinaryTree<E> implements Serializable {
             root.right = rightTree.root;
         } else {
             root.right = null;
+        }
+    }
+
+    /**
+     * Method to read a binary tree.
+     *
+     * @param bR The input file
+     * @return The binary tree
+     * @throws IOException If there is an input error
+     * @pre The input consists of a preorder traversal
+     * of the binary tree. The line "null" indicates a null tree.
+     */
+    public static BinaryTree<String> readBinaryTree(BufferedReader bR)
+            throws IOException {
+        // Read a line and trim leading and trailing spaces.
+        String data = bR.readLine().trim();
+        if (data.equals("null")) {
+            return null;
+        } else {
+            BinaryTree<String> leftTree = readBinaryTree(bR);
+            BinaryTree<String> rightTree = readBinaryTree(bR);
+            return new BinaryTree<String>(data, leftTree, rightTree);
         }
     }
 
@@ -183,28 +161,6 @@ public class BinaryTree<E> implements Serializable {
     }
 
     /**
-     * Method to read a binary tree.
-     *
-     * @param bR The input file
-     * @return The binary tree
-     * @throws IOException If there is an input error
-     * @pre The input consists of a preorder traversal
-     * of the binary tree. The line "null" indicates a null tree.
-     */
-    public static BinaryTree<String> readBinaryTree(BufferedReader bR)
-            throws IOException {
-        // Read a line and trim leading and trailing spaces.
-        String data = bR.readLine().trim();
-        if (data.equals("null")) {
-            return null;
-        } else {
-            BinaryTree<String> leftTree = readBinaryTree(bR);
-            BinaryTree<String> rightTree = readBinaryTree(bR);
-            return new BinaryTree<String>(data, leftTree, rightTree);
-        }
-    }
-
-    /**
      * Method to return the preorder traversal of the binary tree
      * as a sequence of strings each separated by a space.
      *
@@ -225,6 +181,51 @@ public class BinaryTree<E> implements Serializable {
         if (root.right != null) {
             stb.append(" ");
             preorderToString(stb, root.right);
+        }
+    }
+
+    /**
+     * Class to encapsulate a tree node.
+     */
+    protected static class Node<E> implements Serializable {
+        // Data Fields
+
+        /**
+         * The information stored in this node.
+         */
+        public E data;
+        /**
+         * Reference to the left child.
+         */
+        public Node<E> left;
+        /**
+         * Reference to the right child.
+         */
+        public Node<E> right;
+
+        // Constructors
+
+        /**
+         * Construct a node with given data and no children.
+         *
+         * @param data The data to store in this node
+         */
+        public Node(E data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+
+        // Methods
+
+        /**
+         * Returns a string representation of the node.
+         *
+         * @return A string representation of the data fields
+         */
+        @Override
+        public String toString() {
+            return data.toString();
         }
     }
 }
