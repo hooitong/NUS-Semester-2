@@ -1,7 +1,9 @@
+package week_9;
+
 import java.util.Iterator;
 
 /**
- * A MatrixGraph is an implementation of the Graph
+ * A week_9.week_10.MatrixGraph is an implementation of the week_9.week_10.Graph
  * abstract class that uses an array to represent the
  * edges.
  *
@@ -71,7 +73,7 @@ public class MatrixGraph extends AbstractGraph {
 
     /**
      * Get the edge between two vertices. If an
-     * edge does not exist, an Edge with a weight
+     * edge does not exist, an week_9.week_10.Edge with a weight
      * of POSITIVE_INFINITY is returned.
      *
      * @param source - The source
@@ -131,7 +133,7 @@ public class MatrixGraph extends AbstractGraph {
     // Iter class
 
     /**
-     * An iterator to the edges.  An Edge iterator is
+     * An iterator to the edges.  An week_9.week_10.Edge iterator is
      * similar to an Iterator except that its
      * next method will always return an edge
      */
@@ -173,7 +175,7 @@ public class MatrixGraph extends AbstractGraph {
         /**
          * Return the next edge if there is one
          *
-         * @return the next Edge in the iteration
+         * @return the next week_9.week_10.Edge in the iteration
          * @throws NoSuchElementException - there are no
          *                                more edges
          */

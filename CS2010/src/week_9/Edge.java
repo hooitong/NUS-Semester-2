@@ -1,5 +1,7 @@
+package week_9;
+
 /**
- * An Edge represents a relationship between two
+ * An week_9.week_10.Edge represents a relationship between two
  * vertices.
  *
  * @author Koffman and Wolfgang
@@ -23,7 +25,7 @@ public class Edge {
     // Constructor
 
     /**
-     * Construct an Edge with a source of from
+     * Construct an week_9.week_10.Edge with a source of from
      * and a destination of to. Set the weight
      * to 1.0.
      *

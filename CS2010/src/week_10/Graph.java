@@ -1,11 +1,18 @@
+package week_10; /**
+ * @name: Yeap Hooi Tong
+ * @matric: A0111736M
+ * @date: 01/04/14
+ * @time: 9:43 AM
+ */
+
 import java.util.Iterator;
 
 /**
- * Interface to specify a Graph ADT. A graph is a set
+ * Interface to specify a week_10.Graph ADT. A graph is a set
  * of vertices and a set of edges. Vertices are
  * represented by integers from 0 to n - 1. Edges
  * are ordered pairs of vertices. Each implementation
- * of the Graph interface should provide a constructor
+ * of the week_10.Graph interface should provide a constructor
  * that specifies the number of vertices and whether
  * or not the graph is directed.
  *
@@ -50,8 +57,8 @@ public interface Graph {
      *
      * @param source The source vertex
      * @param dest   The destination vertex
-     * @return The Edge between these two vertices
-     * or an Edge with a weight of
+     * @return The week_10.Edge between these two vertices
+     * or an week_10.Edge with a weight of
      * Double.POSITIVE_INFINITY if there is no edge
      */
     Edge getEdge(int source, int dest);
@@ -61,7 +68,7 @@ public interface Graph {
      * to a given vertex.
      *
      * @param source The source vertex
-     * @return An Iterator<Edge> to the vertices
+     * @return An Iterator<week_10.Edge> to the vertices
      * connected to source
      */
     Iterator<Edge> edgeIterator(int source);

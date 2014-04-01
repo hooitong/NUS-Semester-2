@@ -1,9 +1,11 @@
+package week_9;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * A ListGraph is an extension of the AbstractGraph abstract class
+ * A week_9.week_10.ListGraph is an extension of the week_9.week_10.AbstractGraph abstract class
  * that uses an array of lists to represent the edges.
  *
  * @author Koffman and Wolfgang
@@ -64,7 +66,7 @@ public class ListGraph extends AbstractGraph {
      * to a given vertex.
      *
      * @param source The source vertex
-     * @return An Iterator<Edge> to the vertices
+     * @return An Iterator<week_9.week_10.Edge> to the vertices
      * connected to source
      */
     @Override
@@ -74,7 +76,7 @@ public class ListGraph extends AbstractGraph {
 
     /**
      * Get the edge between two vertices. If an
-     * edge does not exist, an Edge with a weight
+     * edge does not exist, an week_9.week_10.Edge with a weight
      * of Double.POSITIVE_INFINITY is returned.
      *
      * @param source The source
@@ -97,10 +99,10 @@ public class ListGraph extends AbstractGraph {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         int numV = getNumV();
-        sb.append("ListGraph getNumV(): " + numV + " isDirected(): " + isDirected() + " :\n");
+        sb.append("week_9.week_10.ListGraph getNumV(): " + numV + " isDirected(): " + isDirected() + " :\n");
         for (int i = 0; i < numV; i++) {
           sb.append("edges[" + i + "]:");
-          for (Edge edge : edges[i]) {
+          for (week_9.week_10.Edge edge : edges[i]) {
             sb.append("->" + edge);
           }
           sb.append("\n");
